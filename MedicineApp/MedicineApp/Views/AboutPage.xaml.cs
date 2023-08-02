@@ -18,12 +18,29 @@ namespace MedicineApp.Views
 
         private void OnSettingsClicked(object sender, EventArgs e)
         {
-            
+            Navigation.PushAsync(new SettingsPage());
         }
 
         private void OnProfileClick(object sender, EventArgs e)
         {
+            Navigation.PushAsync(new LoginPage());
+        }
 
+        private void OnHelpButtonClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new HelpPage());
+        }
+        private void OnCatologButtonClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new CatalogPage());
+        }
+        private void OnPerscriptionButtonClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PerscriptionPage());
+        }
+        private void OnCalenderButtonClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PerscriptionPage());
         }
     }
 }
