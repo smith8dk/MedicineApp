@@ -6,11 +6,11 @@
              Title="Home"
              BackgroundColor="LightGray"
              >
-    
+
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
     </ContentPage.BindingContext>
-    
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Accent">#013f73</Color>
@@ -40,8 +40,58 @@
                    SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}"
                    TextChanged="OnSearchBarTextChanged"
                    WidthRequest="250"/>
+
+                <Label Text="Our Services" TextColor="Black" FontSize="Large"></Label>
+
+                <!-- 2x2 Grid for Square Buttons with Images -->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+
+                    <!-- First Square Button -->
+                    <Frame Grid.Row="0" Grid.Column="0" CornerRadius="5" BackgroundColor="White" HeightRequest="100" WidthRequest="100">
+                        <ImageButton Source="pillClipArt.jpg" Aspect="AspectFill" />
+                    </Frame>
+
+                    <!-- Second Square Button -->
+                    <Frame Grid.Row="0" Grid.Column="1" CornerRadius="5" BackgroundColor="White" HeightRequest="100" WidthRequest="100">
+                        <ImageButton Source="persciptionClipArt.png" Aspect="AspectFill" />
+                    </Frame>
+
+                    <!-- Third Square Button -->
+                    <Frame Grid.Row="1" Grid.Column="0" CornerRadius="5" BackgroundColor="White" HeightRequest="100" WidthRequest="100">
+                        <ImageButton Source="calenderClipArt.png" Aspect="AspectFill" />
+                    </Frame>
+
+                    <!-- Fourth Square Button -->
+                    <Frame Grid.Row="1" Grid.Column="1" CornerRadius="5" BackgroundColor="White" HeightRequest="100" WidthRequest="100">
+                        <ImageButton Source="questionMarkClipArt.png" Aspect="AspectFill" />
+                    </Frame>
+                </Grid>
             </StackLayout>
         </ScrollView>
     </Grid>
-
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            IconImageSource=""
+            Text="Settings"
+            Order="Primary"
+            Priority="0"
+            Clicked="OnSettingsClicked"
+            />
+        <ToolbarItem
+            IconImageSource=""
+            Text="Login"
+            Order="Primary"
+            Priority="0"
+            Clicked="OnProfileClick"
+            />
+    </ContentPage.ToolbarItems>
 </ContentPage>

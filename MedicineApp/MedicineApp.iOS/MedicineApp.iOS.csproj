@@ -145,4 +145,16 @@
   <ItemGroup>
     <AndroidAsset Include="Resources\MedicineApp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pillClipArt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\calenderClipArt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\perscriptionClipArt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\questionMarkClipArt.png" />
+  </ItemGroup>
 </Project>
