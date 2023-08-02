@@ -32,7 +32,7 @@
             </StackLayout>
         </StackLayout>
         <ScrollView Grid.Row="1">
-            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+            <StackLayout Orientation="Vertical" Padding="30,30,30,30" Spacing="50">
                 <SearchBar x:Name="searchBar"
                    Placeholder="Search..."
                    SearchCommand="{Binding SearchCommand}"
@@ -41,9 +41,7 @@
                    TextChanged="OnSearchBarTextChanged"
                    WidthRequest="250"/>
 
-                <Label Text="Our Services" TextColor="Black" FontSize="Large"></Label>
-
-                <!-- 2x2 Grid for Square Buttons with Images -->
+                <!-- 2x2 Grid for Square Buttons with Images and Text -->
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -54,44 +52,29 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-
                     <!-- First Square Button -->
-                    <Frame Grid.Row="0" Grid.Column="0" CornerRadius="5" BackgroundColor="White" HeightRequest="100" WidthRequest="100">
-                        <ImageButton Source="pillClipArt.jpg" Aspect="AspectFill" />
+                    <Frame Grid.Row="0" Grid.Column="0" CornerRadius="10" BackgroundColor="LightGray" HeightRequest="100" WidthRequest="100">
+                        <ImageButton Source="your_image_filename_1.png" Aspect="AspectFill" Clicked="OnCatologButtonClicked"/>
                     </Frame>
 
                     <!-- Second Square Button -->
-                    <Frame Grid.Row="0" Grid.Column="1" CornerRadius="5" BackgroundColor="White" HeightRequest="100" WidthRequest="100">
-                        <ImageButton Source="persciptionClipArt.png" Aspect="AspectFill" />
+                    <Frame Grid.Row="0" Grid.Column="1" CornerRadius="10" BackgroundColor="LightGray" HeightRequest="100" WidthRequest="100">
+
+                            <ImageButton Source="" Aspect="AspectFill" Clicked="OnPerscriptionButtonClicked"/>
                     </Frame>
 
                     <!-- Third Square Button -->
-                    <Frame Grid.Row="1" Grid.Column="0" CornerRadius="5" BackgroundColor="White" HeightRequest="100" WidthRequest="100">
-                        <ImageButton Source="calenderClipArt.png" Aspect="AspectFill" />
+                    <Frame Grid.Row="1" Grid.Column="0" CornerRadius="10" BackgroundColor="LightGray" HeightRequest="100" WidthRequest="100">
+                        <ImageButton Source="" Aspect="AspectFill" Clicked="OnCalenderButtonClicked" />
                     </Frame>
 
                     <!-- Fourth Square Button -->
-                    <Frame Grid.Row="1" Grid.Column="1" CornerRadius="5" BackgroundColor="White" HeightRequest="100" WidthRequest="100">
-                        <ImageButton Source="questionMarkClipArt.png" Aspect="AspectFill" />
+                    <Frame Grid.Row="1" Grid.Column="1" CornerRadius="10" BackgroundColor="LightGray" HeightRequest="100" WidthRequest="100">
+                        <ImageButton Source="questionMarkClipArt.png" Aspect="AspectFill" Clicked="OnHelpButtonClicked"/>
                     </Frame>
                 </Grid>
             </StackLayout>
         </ScrollView>
     </Grid>
-    <ContentPage.ToolbarItems>
-        <ToolbarItem
-            IconImageSource=""
-            Text="Settings"
-            Order="Primary"
-            Priority="0"
-            Clicked="OnSettingsClicked"
-            />
-        <ToolbarItem
-            IconImageSource=""
-            Text="Login"
-            Order="Primary"
-            Priority="0"
-            Clicked="OnProfileClick"
-            />
-    </ContentPage.ToolbarItems>
+
 </ContentPage>
