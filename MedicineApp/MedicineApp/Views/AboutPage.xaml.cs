@@ -15,5 +15,15 @@ namespace MedicineApp.Views
         {
             // Your logic to handle the search bar text changed event
         }
+
+        private void OnSettingsClicked(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void OnProfileClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
