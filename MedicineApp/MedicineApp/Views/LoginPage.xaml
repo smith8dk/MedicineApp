@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="5" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
-                
+                <Label Text="Login" FontSize="Large" Padding="0,20,0,60" VerticalOptions="FillAndExpand"></Label>
                 <Label Text="User Name" FontSize="Body" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"></Label>
                 <Entry x:Name="FullName_Entry" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" Margin="5"></Entry>
 

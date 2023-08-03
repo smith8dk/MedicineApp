@@ -10,37 +10,38 @@ namespace MedicineApp.Views
         public AboutPage()
         {
             InitializeComponent();
-        }
+        } 
+
         private void OnSearchBarTextChanged(object sender, TextChangedEventArgs e)
         {
-            // Your logic to handle the search bar text changed event
+            
         }
 
-        private void OnSettingsClicked(object sender, EventArgs e)
+        private async void OnSettingsClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new SettingsPage());
+            await Shell.Current.GoToAsync($"//{nameof(SettingsPage)}");
         }
 
-        private void OnProfileClick(object sender, EventArgs e)
+        private async void OnProfileClick(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new LoginPage());
+            await Shell.Current.Navigation.PushAsync(new LoginPage());
         }
 
-        private void OnHelpButtonClicked(object sender, EventArgs e)
+        private async void OnHelpButtonClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new HelpPage());
+            await Shell.Current.GoToAsync($"//{nameof(HelpPage)}");
         }
-        private void OnCatologButtonClicked(object sender, EventArgs e)
+        private async void OnCatologButtonClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new CatalogPage());
+            await Shell.Current.Navigation.PushAsync(new CatalogPage());
         }
-        private void OnPerscriptionButtonClicked(object sender, EventArgs e)
+        private async void OnPerscriptionButtonClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new PerscriptionPage());
+            await Shell.Current.Navigation.PushAsync(new PerscriptionPage());
         }
-        private void OnCalenderButtonClicked(object sender, EventArgs e)
+        private async void OnCalenderButtonClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new PerscriptionPage());
+            await Shell.Current.Navigation.PushAsync(new CalendarPage());
         }
     }
 }

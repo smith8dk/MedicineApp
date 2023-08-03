@@ -17,30 +17,12 @@ namespace MedicineApp.Views
             InitializeComponent();
             this.BindingContext = new LoginViewModel();
         }
-        void Button_Clicked(System.Object sender, System.EventArgs e)
+        async void Button_Clicked(System.Object sender, System.EventArgs e)
         {
 
             if (FullName_Entry.Text != "" && FullName_Entry.Text != null)
             {
-                EntryValue.Text = "Username = " + FullName_Entry.Text + " Password = " + Password_Entry.Text;
-            }
-            else
-            {
-                EntryValue.Text = "";
-            }
-
-        }
-
-        void FullName_Entry_TextChanged(object sender, Xamarin.Forms.TextChangedEventArgs e)
-        {
-
-            if (FullName_Entry.Text != "" && FullName_Entry.Text != null)
-            {
-                EntryValue.Text = "Username = " + FullName_Entry.Text + " Password = " + Password_Entry.Text;
-            }
-            else
-            {
-                EntryValue.Text = "";
+                await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
             }
         }
     }
