@@ -12,9 +12,14 @@ namespace MedicineApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CatalogPage : ContentPage
     {
-        public CatalogPage()
+        public CatalogPage(PrescriptionListViewModel viewModel)
         {
             InitializeComponent();
+            BindingContext = viewModel;      
+        }
+        private async void OnAddClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.Navigation.PushAsync(new PrescriptionPage()); ;
         }
     }
 }

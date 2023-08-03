@@ -63,12 +63,12 @@
 
                     <!-- Second Square Button -->
                     <Frame Grid.Row="0" Grid.Column="1" CornerRadius="10" BackgroundColor="LightGray" HeightRequest="100" WidthRequest="100">
-                        <ImageButton Source="perscriptionClipArt" Aspect="AspectFill" Clicked="OnPerscriptionButtonClicked"/>
+                        <ImageButton Source="prescriptionClipArt" Aspect="AspectFill" Clicked="OnPrescriptionButtonClicked"/>
                     </Frame>
 
                     <!-- Third Square Button -->
                     <Frame Grid.Row="1" Grid.Column="0" CornerRadius="10" BackgroundColor="LightGray" HeightRequest="100" WidthRequest="100">
-                        <ImageButton Source="calenderClipArt.png" Aspect="AspectFill" Clicked="OnCalenderButtonClicked" />
+                        <ImageButton Source="calenderClipArt.png" Aspect="AspectFill" Clicked="OnStoreButtonClicked" />
                     </Frame>
 
                     <!-- Fourth Square Button -->

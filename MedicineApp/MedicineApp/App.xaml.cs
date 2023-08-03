@@ -1,4 +1,5 @@
 ﻿using MedicineApp.Services;
+using MedicineApp.ViewModels;
 using MedicineApp.Views;
 using System;
 using Xamarin.Forms;
@@ -12,6 +13,9 @@ namespace MedicineApp
         public App()
         {
             InitializeComponent();
+
+            PrescriptionListViewModel viewModel = new PrescriptionListViewModel();
+            Resources.Add("PrescriptionListViewModel", viewModel);
 
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();

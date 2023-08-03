@@ -20,7 +20,7 @@ namespace MedicineApp.Views
         async void Button_Clicked(System.Object sender, System.EventArgs e)
         {
 
-            if (FullName_Entry.Text != "" && FullName_Entry.Text != null)
+            if (FullName_Entry.Text != "" && FullName_Entry.Text != null && Password_Entry.Text != "" && Password_Entry.Text != null)
             {
                 await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
             }
