@@ -132,6 +132,9 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Syncfusion.Xamarin.SfCalendar">
+      <Version>22.2.7</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
@@ -143,7 +146,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Resources\MedicineApp.png" />
+    <BundleResource Include="Resources\MedicineApp.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\pillClipArt.jpg" />
@@ -152,7 +155,7 @@
     <BundleResource Include="Resources\calenderClipArt.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\perscriptionClipArt.png" />
+    <BundleResource Include="Resources\prescriptionClipArt.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\questionMarkClipArt.png" />

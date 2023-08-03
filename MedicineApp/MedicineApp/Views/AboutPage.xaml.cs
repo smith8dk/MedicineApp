@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MedicineApp.ViewModels;
+using System;
 using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -10,37 +11,38 @@ namespace MedicineApp.Views
         public AboutPage()
         {
             InitializeComponent();
-        }
+        } 
+
         private void OnSearchBarTextChanged(object sender, TextChangedEventArgs e)
         {
-            // Your logic to handle the search bar text changed event
+            
         }
 
-        private void OnSettingsClicked(object sender, EventArgs e)
+        private async void OnProfileClick(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new SettingsPage());
+            await Shell.Current.Navigation.PushAsync(new LoginPage());
         }
 
-        private void OnProfileClick(object sender, EventArgs e)
+        private async void OnHelpButtonClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new LoginPage());
+            await Shell.Current.GoToAsync($"//{nameof(HelpPage)}");
         }
-
-        private void OnHelpButtonClicked(object sender, EventArgs e)
+        private async void OnCatologButtonClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new HelpPage());
+            // Get the PrescriptionListViewModel from App's resources (App.xaml.cs)
+            if (Application.Current.Resources.TryGetValue("PrescriptionListViewModel", out var viewModelObj) && viewModelObj is PrescriptionListViewModel viewModel)
+            {
+                // Pass the PrescriptionListViewModel instance to the CatalogPage constructor
+                await Shell.Current.Navigation.PushAsync(new CatalogPage(viewModel));
+            }
         }
-        private void OnCatologButtonClicked(object sender, EventArgs e)
+        private async void OnPrescriptionButtonClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new CatalogPage());
+            await Shell.Current.Navigation.PushAsync(new PrescriptionPage());
         }
-        private void OnPerscriptionButtonClicked(object sender, EventArgs e)
+        private async void OnStoreButtonClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new PerscriptionPage());
-        }
-        private void OnCalenderButtonClicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new PerscriptionPage());
+            await Shell.Current.Navigation.PushAsync(new StorePage());
         }
     }
 }

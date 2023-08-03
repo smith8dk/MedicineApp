@@ -4,8 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="MedicineApp.Views.SettingsPage"
-             Shell.NavBarIsVisible="False">
+             x:Class="MedicineApp.Views.PrescriptionPage"
+             >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -13,7 +13,12 @@
         </Grid.RowDefinitions>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="5" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
-                
+                <Label Text="Prescription Page"></Label>
+                <Entry Placeholder="Prescription Name" Text="{Binding Name}" />
+                <Entry Placeholder="Instructions" Text="{Binding Instructions}" />
+                <Entry Placeholder="Description" Text="{Binding Description}" />
+
+                <Button Text="Save Prescription" Clicked="OnSavePrescriptionClicked" />
             </StackLayout>
         </ScrollView>
     </Grid>

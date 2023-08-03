@@ -4,9 +4,13 @@
              x:Class="MedicineApp.Views.AboutPage"
              xmlns:vm="clr-namespace:MedicineApp.ViewModels"
              Title="Home"
-             BackgroundColor="LightGray"
+             BackgroundColor="White"
              >
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Log-In" Clicked="OnProfileClick"/>
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
     </ContentPage.BindingContext>
@@ -36,7 +40,7 @@
                 <SearchBar x:Name="searchBar"
                    Placeholder="Search..."
                    SearchCommand="{Binding SearchCommand}"
-                   BackgroundColor="White"
+                   BackgroundColor="LightGray"
                    SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}"
                    TextChanged="OnSearchBarTextChanged"
                    WidthRequest="250"/>
@@ -54,18 +58,17 @@
 
                     <!-- First Square Button -->
                     <Frame Grid.Row="0" Grid.Column="0" CornerRadius="10" BackgroundColor="LightGray" HeightRequest="100" WidthRequest="100">
-                        <ImageButton Source="your_image_filename_1.png" Aspect="AspectFill" Clicked="OnCatologButtonClicked"/>
+                        <ImageButton Source="pillClipArt.jpg" Aspect="AspectFill" Clicked="OnCatologButtonClicked"/>
                     </Frame>
 
                     <!-- Second Square Button -->
                     <Frame Grid.Row="0" Grid.Column="1" CornerRadius="10" BackgroundColor="LightGray" HeightRequest="100" WidthRequest="100">
-
-                            <ImageButton Source="" Aspect="AspectFill" Clicked="OnPerscriptionButtonClicked"/>
+                        <ImageButton Source="prescriptionClipArt" Aspect="AspectFill" Clicked="OnPrescriptionButtonClicked"/>
                     </Frame>
 
                     <!-- Third Square Button -->
                     <Frame Grid.Row="1" Grid.Column="0" CornerRadius="10" BackgroundColor="LightGray" HeightRequest="100" WidthRequest="100">
-                        <ImageButton Source="" Aspect="AspectFill" Clicked="OnCalenderButtonClicked" />
+                        <ImageButton Source="calenderClipArt.png" Aspect="AspectFill" Clicked="OnStoreButtonClicked" />
                     </Frame>
 
                     <!-- Fourth Square Button -->

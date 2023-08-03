@@ -81,13 +81,16 @@
     <FlyoutItem Title="Home" Icon="icon_about.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Your Medications" Icon="icon_feed.png">
-        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
+    <FlyoutItem Title="New Prescription" Icon="icon_feed.png">
+        <ShellContent Route="CatalogPage" ContentTemplate="{DataTemplate local:PrescriptionPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Store" Icon="icon_feed.png">
+        <ShellContent Route="StorePage" ContentTemplate="{DataTemplate local:StorePage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Help" Icon="icon_feed.png">
+        <ShellContent Route="HelpPage" ContentTemplate="{DataTemplate local:HelpPage}" />
     </FlyoutItem>
 
-    <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
-    <MenuItem Text="LogIn" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
-    </MenuItem>
 
     <!--
         TabBar lets you define content that won't show up in a flyout menu. When this content is active
